@@ -1,5 +1,9 @@
 # Änderungen
 
+## 4.3.4 – 2026-11-14
+
+- **Ohne Terminal:** `README.md` beschreibt den Abgleich als Satz an Claude statt als Befehl; `SKILL.md` sagt ausdrücklich, dass der Nutzer nie im Terminal arbeitet.
+
 ## 4.3.3 – 2026-11-14
 
 - **Klarer Text zum Datenzugriff:** `SKILL.md`, `README.md`, `references/06_sperrliste-server.md` und `scripts/sperrliste.py` sagen nicht mehr „für ausgewählte Personen mit Zugangsschlüssel einsehbar“, sondern dass die Daten nie ausgegeben werden und nur das Ergebnis des Abgleichs für selbst geprüfte Einträge zurückkommt.

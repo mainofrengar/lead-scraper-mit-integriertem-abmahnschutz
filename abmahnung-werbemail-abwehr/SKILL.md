@@ -9,7 +9,7 @@ Verfahren für Unternehmen, die wegen einer unerlaubten Werbe-E-Mail (typisch: B
 
 **Datenhinweis (einmal zu Beginn nennen, in einem Satz):** Für den kostenlosen Check gehen die Eckdaten der Abmahnung an den Server von Agentur Consulting und werden dort gespeichert; den Abmahner meldet der Skill am Ende nur, wenn der Nutzer zustimmt – nur Domains und Sachangaben, keine E-Mail-Adressen, keine Namen (Details: `references/06_sperrliste-server.md`).
 
-Der Nutzer ist in der Regel das abgemahnte Unternehmen selbst (Geschäftsführung oder Mitarbeiter). Weise einmal zu Beginn kurz darauf hin, dass der Skill Recherche und Entwürfe liefert, aber keine anwaltliche Beratung ersetzt, und dass bei Klage, einstweiliger Verfügung oder hohen Beträgen ein Anwalt hinzugezogen werden sollte. Danach keine wiederholten Disclaimer.
+Der Nutzer ist in der Regel das abgemahnte Unternehmen selbst (Geschäftsführung oder Mitarbeiter). Weise einmal zu Beginn kurz darauf hin, dass der Skill Recherche und Entwürfe liefert, aber keine anwaltliche Beratung ersetzt, und dass bei Klage, einstweiliger Verfügung oder hohen Beträgen ein Anwalt hinzugezogen werden sollte. Danach keine wiederholten Disclaimer. Der Nutzer arbeitet nie im Terminal: Skripte selbst ausführen, nie Befehle zum Abtippen zeigen.
 
 ## Aufbau dieses Skills
 

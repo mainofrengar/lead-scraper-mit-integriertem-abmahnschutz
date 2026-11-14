@@ -21,11 +21,7 @@ Es gibt keine öffentliche Liste. Abmahnungen, Meldungen und die Sperrliste lieg
 
 - **Abmahnungs-Check (kostenlos):** Claude sagt vorher, dass die Eckdaten der Abmahnung an den Server gehen und dort gespeichert werden. Gesendet wird nur, was das Format vorsieht, ohne Namen, E-Mail-Adressen und Mail-Inhalte. Die Antwort „So würden wir damit umgehen“ endet immer mit dem Hinweis „Keine Rechtsberatung …“.
 - **Meldung (kostenlos):** Am Ende fragt Claude, ob der Abmahner gemeldet werden soll. Gemeldet werden nur Domains und Sachangaben: Kanzlei-Domain, Stufe, Monat, Forderungsspanne, Vorgehen, Ausgang. Keine E-Mail-Adressen, keine Namen.
-- **Abgestufter Abgleich (nur mit Abo):** Ist der Abmahner bekannt, mit welcher Stufe? Vor jeder Kampagne die Kontaktliste bereinigen:
-  ```bash
-  python3 scripts/sperrliste.py abgleich --kontakte kontakte.csv --spalte email   # schreibt _bereinigt.csv und _gesperrt.csv
-  ```
-  Im Free-Plan erscheint „Kostenpflichtige Features können im Free-Plan nicht verwendet werden“. Abo: `python3 scripts/lizenz.py abo`.
+- **Abgestufter Abgleich (nur mit Abo):** Ist der Abmahner bekannt, mit welcher Stufe? Vor jeder Kampagne sagst du Claude: *„Gleich meine Kontaktliste mit der Sperrliste ab.“* Claude schreibt eine bereinigte und eine gesperrte Liste (technisch: `scripts/sperrliste.py abgleich`). Im Free-Plan gibt es keinen Abgleich; *„Zeig mir mein Abo“* öffnet den Abschluss.
 
 ## Ordnerstruktur
 

@@ -2,6 +2,14 @@
 
 Neueste Einträge oben. Ein Eintrag je Änderung an Wissen, Pfaden oder Werkzeugen: Datum, was sich geändert hat und warum. So sieht jede KI und jeder Mensch, welcher Stand gilt und was neu ist.
 
+## 2026-11-14 (ohne Terminal)
+
+- **Kunden arbeiten nie im Terminal.** Anlass: Vorgabe des Betreibers; alle Kunden nutzen Claude Code oder Codex. Was sich ändert:
+  - `README.md`: Schnellstart als Satz an Claude statt Konsolenbefehle.
+  - `SKILL.md`: auch Befehle aus Hinweisen der Werkzeuge (z. B. „Abo ansehen: … abo“) nie zum Abtippen zeigen, sondern anbieten, es zu erledigen.
+  - Öffentliches Paket: Die Skills sind beim Öffnen des Ordners in Claude Code (`.claude/skills/`) und Codex (`.agents/skills/`) sofort da, ohne Installation.
+  - Support-Mails nennen „Zeig mir mein Abo“ statt eines Befehls.
+
 ## 2026-11-14 (Veröffentlichung)
 
 - **Rechtstexte freigegeben, öffentliches Paket.** Anlass: anwaltliche Abnahme; Vorbereitung der Veröffentlichung. Was sich ändert:

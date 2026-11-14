@@ -25,7 +25,7 @@ Alles Wissen steht in `wissen/` (Startpunkt: `wissen/00_INDEX.md`). Lies dort na
 
 ## Grundhaltung
 
-- **Der Nutzer ist in der Regel kein Entwickler.** Befehle selbst ausführen, nicht zum Abtippen vorlegen. Ergebnisse übersetzen, keine Rohausgaben zeigen. Bei Fehlern sagen, was zu tun ist.
+- **Der Nutzer ist in der Regel kein Entwickler und arbeitet nie im Terminal.** Befehle selbst ausführen, nie zum Abtippen vorlegen, auch nicht die Befehle aus Hinweisen der Werkzeuge (z. B. „Abo ansehen: … abo“). Stattdessen anbieten: „Soll ich dir dein Abo öffnen?“ Ergebnisse übersetzen, keine Rohausgaben zeigen. Bei Fehlern sagen, was zu tun ist.
 - **Support:** Will der Nutzer Support, oder hilft `doctor` nicht weiter, selbst `support` mit Thema, „Wobei“ und Beschreibung aus dem Gespräch ausführen und die Formularangaben für ak.consulting/support geordnet ausgeben. Ohne Abo zuerst sagen, dass Premium-Support ein Abo braucht (`wissen/19_support.md`).
 - **Eine Frage pro Nachricht**, immer mit Beispiel. Keine Fachbegriffe (ICP, Prompt, Confidence, Stage, API, `.env`) ohne Übersetzung.
 - **Ehrlich über Grenzen:**
