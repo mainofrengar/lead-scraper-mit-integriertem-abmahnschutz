@@ -1,0 +1,140 @@
+## CONTEXT
+Du erhältst einen strukturierten Input mit drei Feldern. Deine Aufgabe: Erstelle daraus einen sauberen Videotitel – so wie ein Mensch ihn schreiben würde. Kurz, natürlich, grammatikalisch korrekt. Funktioniert für alle Branchen.
+## INPUT
+{{Video Title Input}}
+## REGELN
+### Regel 1: Kein CAPS
+Jedes Wort, das komplett in Großbuchstaben steht, wird in normale Schreibweise (Title Case) umgewandelt. Ausnahme: nur `B&B`.
+- `AKZENT` → `Akzent`
+- `BODEBLICK` → `Bodeblick`
+- `HOTEL` → `Hotel`
+- `JUFA` → `Jufa`
+- `B&B` → `B&B`
+Das gilt ausnahmslos für jeden Firmennamen, jede Branche, jedes Wort.
+### Regel 2: Grammatik
+Ersetze "von" durch die grammatikalisch korrekte Form:
+- Maskulin/Neutrum → "vom" (Hotel, Gasthof, Hof, Resort, Center, Schloss, etc.)
+- Feminin → "von der" (Pension, Villa, Residenz, Burg, Gaststätte, etc.)
+- Plural → "von den" (Elbterrassen, Stuben, etc.)
+- Unklar → "von" beibehalten
+### Regel 3: Zusammenbauen
+- **Firstname und Last Name vorhanden:** `Video für [Vorname] [Last Name] vom/von der/von den [Name]`
+- **Firstname und Last Name "nicht vorhanden":** `Video für das/die/den [Name]`
+## OUTPUT
+Nur dieses JSON, nichts anderes:
+```json
+{
+"cleanedText": "Fertiger Videotitel",
+"cleanedCompanyName": "Gekürzter Firmenname"
+}
+```
+## BEISPIELE (leicht → schwer)
+### Nur Grammatik
+Input:
+```
+Videotitle: Video für Carsten Schmid von RK Entrümpelung Köln GmbH
+Firstname und Last Name: Carsten Schmid
+Firmenname: RK Entrümpelung Köln GmbH
+```
+```json
+{
+"cleanedText": "Video für Carsten Schmid von RK Entrümpelung Köln GmbH",
+"cleanedCompanyName": "RK Entrümpelung Köln GmbH"
+}
+```
+### CAPS fixen
+Input:
+```
+Videotitle: Video für Jakob Groß von BODEBLICK
+Firstname und Last Name: Jakob Groß
+Firmenname: BODEBLICK
+```
+```json
+{
+"cleanedText": "Video für Jakob Groß vom Bodeblick",
+"cleanedCompanyName": "Bodeblick"
+}
+```
+### Kein Vorname → Artikel
+Input:
+```
+Videotitle: Video für Elektrotechnik Service GmbH Berlin
+Firstname und Last Name: nicht vorhanden
+Firmenname: Elektrotechnik Service GmbH Berlin
+```
+```json
+```
+### Ortszusatz + Sonderzeichen
+Input:
+```
+Videotitle: Video für Montageservice - Stolberg im Harz
+Firstname und Last Name: nicht vorhanden
+Firmenname: Montageservice - Stolberg im Harz
+```
+```json
+```
+### Ortszusatz bei Eigenname
+Input:
+```
+Videotitle: Video für Horst-Dieter Kunz von den Entrümplern Konstanz
+Firstname und Last Name: Horst-Dieter Kunz
+Firmenname: Entrümpler Konstanz
+```
+```json
+{
+"cleanedText": "Video für Horst-Dieter Kunz von den Entrümplern Konstanz",
+"cleanedCompanyName": "Entrümpler Konstanz"
+}
+```
+### Generischen Präfix entfernen
+Input:
+```
+Videotitle: Video für Manfred Müller von Bauservice Eschbacher Katz
+Firstname und Last Name: Manfred Müller
+Firmenname: Bauservice Eschbacher Katz
+```
+```json
+{
+"cleanedText": "Video für Manfred Müller von  Bauservice Eschbacher Katz",
+"cleanedCompanyName": "Bauservice Eschbacher Katz"
+}
+```
+### Kein Vorname, kein Last Name + Standort + Suffix
+Input:
+```
+Videotitle: Video für Seminaris Hotel Bad Honnef GmbH
+Firstname und Last Name: nicht vorhanden
+Firmenname: Seminaris Hotel Bad Honnef GmbH
+```
+```json
+{
+"cleanedText": "Video für das Seminaris Hotel Bad Honnef GmbH",
+"cleanedCompanyName": "Seminaris Hotel Bad Honnef GmbH"
+}
+```
+### Nicht-Hotel Branche
+Input:
+```
+Videotitle: Video für Stefan Maier von MÜLLER ELEKTROTECHNIK GmbH
+Firstname und Last Name: Stefan Maier
+Firmenname: MÜLLER ELEKTROTECHNIK GmbH
+```
+```json
+{
+"cleanedText": "Video für Stefan Maier von Müller Elektrotechnik",
+"cleanedCompanyName": "Müller Elektrotechnik"
+}
+```
+### Nicht-Hotel ohne Vorname
+Input:
+```
+Videotitle: Video für Bäckerei Schmidt & Söhne OHG
+Firstname: nicht vorhanden
+Firmenname: Bäckerei Schmidt & Söhne OHG
+```
+```json
+{
+"cleanedText": "Video für die Bäckerei Schmidt & Söhne",
+"cleanedCompanyName": "Bäckerei Schmidt & Söhne"
+}
+```

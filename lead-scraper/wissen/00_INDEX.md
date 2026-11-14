@@ -1,0 +1,51 @@
+# Wissensbibliothek – Lead-Scraper und Abmahnschutz
+
+Alles Fachwissen zum Paket als Markdown, unabhängig vom KI-Modell. Jede Datei steht für sich und nennt am Anfang Zweck, Zielgruppe und verwandte Dateien.
+
+## Mit deinem KI-Modell nutzen
+
+| Modell / Werkzeug | So geht's |
+|---|---|
+| **Claude (Skill)** | Skill `lead-scraper` hochladen – die Bibliothek ist enthalten, Claude liest sie selbst |
+| **Claude Code** | Ordner `lead-scraper/` öffnen – `CLAUDE.md` verweist hierher |
+| **ChatGPT Codex** | Ordner `lead-scraper/` öffnen – `AGENTS.md` verweist hierher; Netzwerkzugriff erlauben |
+| **Claude-Projekt, ChatGPT (Custom GPT / Projekt), Gemini (Gem), NotebookLM** | den Ordner `wissen/` als Projektwissen hochladen – oder die Datei `WISSEN_KOMPLETT.md` aus dem Paketordner, wenn nur eine Datei geht |
+
+Start-Prompt für andere Modelle:
+
+> Du begleitest mich beim Aufbau von B2B-Leadlisten mit dem „Lead-Scraper“. Dein Wissen steht in den hochgeladenen Markdown-Dateien. Beginne mit dem Zielgruppen-Interview aus `02_zielgruppen-interview.md`: eine Frage pro Nachricht, immer mit Beispiel. Beantworte Rückfragen nur aus diesen Dateien. Wenn dort etwas nicht steht, sag das, statt zu raten. Rechtliche Themen sind keine Rechtsberatung.
+
+## Inhalt
+
+| Datei | Worum es geht | Lesen, wenn … |
+|---|---|---|
+| `01_ueberblick.md` | Gesamtablauf, Pfade, wer was macht | du neu bist |
+| `02_zielgruppen-interview.md` | Fragen vor jedem Lauf, Wahl des Pfads, Auftragsdatei | ein neuer Auftrag beginnt |
+| `03_pfad-google-maps.md` | Firmen mit Standort: Stufen, Kosten, Prüfprofil, Quoten | der Pfad Google Maps gewählt ist |
+| `04_pfad-amazon.md` | Amazon-Seller: Ablauf, Filter, Kosten, Quoten, Grenzen, Risiken | Händler auf amazon.de gesucht sind oder eine eigene Firmenliste angereichert werden soll |
+| `05_pfad-recruiting.md` | Recruiting über die Firmen-Website: Firmen aus Google Maps, offene Stelle auf der eigenen Website erkennen, Opener zur Stelle; Kosten, Grenzen, Recht | Firmen gesucht sind, die gerade einstellen, und die Branche bekannt ist |
+| `06_pfad-e-commerce.md` | Onlineshops: erst Anforderungen klären, dann Shop-Liste prüfen (aktiver Shop, passt zum Shop-Profil, Traffic), anreichern und je Lead die fertige Mail ausgeben; Kosten, Grenzen, Recht | eine Liste von Onlineshops vorliegt |
+| `07_lead-ausgabe-und-spalten.md` | Ausgabedateien, Spalten, Ansprache-Regeln, Standardformat | die Liste in ein Versandtool soll |
+| `08_versand-und-recht.md` | so arbeiten wir sauber: Kanäle, Pflichtangaben, Datenschutz, Quellen-Nutzungsbedingungen, Checkliste | vor dem ersten Versand |
+| `09_sperrliste.md` | Sperrliste auf dem Server: Free und Abo, Stufen, Datenweitergabe, Melden, Widerspruch | Fragen zur Sperrliste, zum Abo oder zur Datenweitergabe |
+| `10_abmahnung-was-tun.md` | erste Schritte nach einer Abmahnung | eine Abmahnung ist da |
+| `11_zugaenge-und-kosten.md` | Konten, Schlüssel, Kostenhebel | vor der Einrichtung, vor großen Läufen |
+| `12_fehlerbehebung-faq.md` | typische Probleme und Antworten | etwas klemmt |
+| `13_glossar.md` | Begriffe von A bis Z | ein Wort unklar ist |
+| `14_neuen-pfad-anlegen.md` | wie weitere Pfade dazukommen | ein Pfad gebaut wird |
+| `15_learnings-architekturbueros-2026-10.md` | gemessene Kosten je Schritt, Kostenfallen, Prompt- und Mengen-Learnings aus einem echten Lauf | ein Lauf geplant oder kalkuliert wird |
+| `16_videoseiten.md` | persönliches Video je Lead, eigene Landingpage im Branding des Nutzers, Server, Kosten, Recht | Video-Outreach geplant ist oder der Nutzer nach Seiten, Videos oder Server fragt |
+| `17_learnings-videoseiten-testlauf-2026-10.md` | Fehler und Regeln aus dem ersten echten Videoseiten-Lauf: Skael-Eigenheiten, Player-Start, Texte im Datenschutz-Block, Prüfen der Seite | Videoseiten zum ersten Mal für einen Nutzer gebaut werden |
+| `18_pfad-stellensuche.md` | Recruiting über Jobportale: konkrete Anzeigen per Suchbegriff aus Indeed, Stepstone, Arbeitsagentur, Kununu, Größen-Check, Stellenliste und Firmen, optional Kontakt und Opener; gemessene Quoten, Grenzen, Recht | Firmen gesucht sind, die einen bestimmten Beruf suchen |
+| `19_support.md` | Support: Befehl `support`, Angaben für ak.consulting/support, Premium-Support nur mit Abo, was im Support-Paket ist | der Nutzer Support will oder `doctor` nicht weiterhilft |
+
+## Pflege
+
+- Neues Wissen aus Läufen hier eintragen, nicht nur im Chat: Fundquoten, Fehlermuster, Kosten.
+- Jede Datei beginnt mit **Zweck / Für wen / Verwandt**.
+- Jede Tatsache steht an einer Stelle; andere Dateien verweisen darauf.
+- Fakten, die sich ändern können (Preise, Rechtslage, Quoten, Versionen), stehen unter `**Stand:** JJJJ-MM-TT · **Prüfen bis:** JJJJ-MM-TT`. Ist die Frist abgelaufen, gilt die Angabe als ungeprüft. Die KI sagt das dem Nutzer, statt die Zahl als sicher auszugeben.
+- Technische Details zu einem Pfad stehen in `pfade/<pfad>/referenzen/`. Hier steht nur, was Nutzer und KI für Entscheidungen brauchen.
+- Prüfen: `python3 werkzeuge/wissen_pruefen.py` (abgelaufene Fristen, fehlende Index-Einträge, tote Verweise, veraltete `WISSEN_KOMPLETT.md`).
+- Änderungen mit Datum in `CHANGELOG.md` festhalten.
+- Stand dieser Bibliothek: **November 2026**.
